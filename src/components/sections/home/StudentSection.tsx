@@ -85,7 +85,7 @@ const StudentSection = () => {
     },
     {
       id: "student-2",
-      name: "Emily Rodriguez",
+      name: "Raga Manjari , Nagercoil",
       role: "Batch - ‘09 - ‘10",
       videoSrc:  "/video/customer-review-3.mp4",
     },
