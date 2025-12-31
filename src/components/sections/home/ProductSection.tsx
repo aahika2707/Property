@@ -12,17 +12,22 @@ import { LocationIco } from "@/helpers/ImageHelper";
 const sheetURL =
   "https://opensheet.elk.sh/1FExtxjRSd7SH-bHdryk9pikNQwc1znnZ9brrOJaRjvQ/Sheet1";
 
+// 🔥 Type for property
+interface Property {
+  instaLink?: string;
+  location?: string;
+  label?: string;
+  priceLabel?: string;
+}
+
 // 🔥 Function: Instagram Thumbnail Extractor
 const getInstagramThumbnail = (url: string) => {
-    console.log("url", url)
   if (!url) return "";
 
   try {
     const match = url.match(/instagram\.com\/p\/([^/?]+)/);
-    console.log("match", match)
     if (match && match[1]) {
       const code = match[1];
-      console.log("code", code)
       return `https://www.instagram.com/p/${code}/media/?size=l`;
     }
   } catch {}
@@ -30,15 +35,14 @@ const getInstagramThumbnail = (url: string) => {
   return "";
 };
 
-
 const PropertySection = () => {
-  const [properties, setProperties] = useState<any[]>([]);
+  const [properties, setProperties] = useState<Property[]>([]);
 
   useEffect(() => {
     const fetchSheet = async () => {
       try {
         const res = await fetch(sheetURL);
-        const data = await res.json();
+        const data: Property[] = await res.json();
         setProperties(data);
       } catch (err) {
         console.error("Sheet Fetch Error:", err);
@@ -50,7 +54,7 @@ const PropertySection = () => {
 
   return (
     <ContainerWidget>
-      <ScrollWidget animation="slideUp">
+      <ScrollWidget animation="fadeUp">
         <TitleWidget
           title="Property Listings"
           subTitle="Plots & Homes Just For You"
@@ -68,11 +72,8 @@ const PropertySection = () => {
               ? item.instaLink
               : "";
 
-            // 🔥 If insta link exists → Thumbnail else fallback
-            const thumbImage = instaLink
-              ? getInstagramThumbnail(instaLink)
-              : "";
-            console.log("thumbImage", thumbImage)
+            const thumbImage = instaLink ? getInstagramThumbnail(instaLink) : "";
+
             return (
               <div
                 key={index}
@@ -85,10 +86,9 @@ const PropertySection = () => {
                     alt={item.location || "property"}
                     fill
                     className="object-cover"
-                    onError={(e: any) =>
-                      (e.currentTarget.src =
-                        "")
-                    }
+                    onError={(
+                      e: React.SyntheticEvent<HTMLImageElement, Event>
+                    ) => (e.currentTarget.src = "")}
                   />
 
                   {item.label && (
@@ -102,7 +102,14 @@ const PropertySection = () => {
                 <div className="p-4">
                   {item.location && (
                     <p className="flex items-center text-sm text-gray-600 mb-2">
-                      <ImageWidget src={LocationIco} className="w-4 h-4 mr-2" />
+                    <ImageWidget
+                     src={thumbImage}
+  alt={item.location || "property"}
+  fill
+  className="object-cover"
+  onError={(e) => (e.currentTarget.src = "/fallback.jpg")}
+/>
+  
                       {item.location}
                     </p>
                   )}
