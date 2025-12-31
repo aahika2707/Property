@@ -36,7 +36,7 @@ const ProductList = ({ products }: ProductListProps) => {
         >
           <LinkWidget href={item.instaLink || ""} target="_blank">
             <div className="relative h-56">
-              <ImageWidget src={item.image} alt={item.title} fill className="object-cover" />
+              <ImageWidget src={item.image} alt={item.label} fill className="object-cover" />
               <span
                 className={`absolute top-2 left-0 text-xs font-semibold text-white py-1 px-3 ${
                   item.label === "Ongoing" ? "bg-green-500" : "bg-blue-500"
