@@ -18,6 +18,7 @@ interface Product {
   note: string;
   instaLink: string;
   image: string;
+  overView: string;
 }
 
 const API_URL =
