@@ -43,8 +43,8 @@ const SOCIAL_LINKS = [
 const QUICK_LINKS = [
   { id: "home", url: "/", label: "Home" },
   { id: "about", url: "/", label: "About Us" },
-  { id: "buyers", url: "/", label: "For Buyers" },
-  { id: "sellers", url: "/", label: "For Sellers" },
+  { id: "buyers", url: "/", label: "Buy" },
+  { id: "sellers", url: "/", label: "Sell" },
   { id: "contact", url: "/", label: "Contact Us" },
 ];
 

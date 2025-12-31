@@ -15,8 +15,8 @@ import type { DropdownMenu as DropdownMenuType, MenuItem } from "./utils/types";
 const menuItems: (MenuItem | DropdownMenuType)[] = [
   { href: "/", label: "Home" },
   { href: "/about-us", label: "About us" },
-  { href: "/for-buyers", label: "For Buyers" },
-  { href: "/for-sellers", label: "For Sellers" },
+  { href: "/for-buyers", label: "Buy" },
+  { href: "/for-sellers", label: "Sell" },
   { href: "/contact-us", label: "Contact Us" },
 
 ];
@@ -70,7 +70,7 @@ const WebHeader = () => {
               />
             </LinkWidget>
 
-            <ul className="hidden lg:flex items-center gap-1 xl:gap-[38px] 2xl:gap-[46px] text-[14px] 2xl:text-[14px] 3xl:text-[18px]">
+            <ul className="hidden lg:flex items-center gap-1 xl:gap-[38px] 2xl:gap-[46px] text-[14px] 2xl:text-[14px] 3xl:text-[18px] text-black">
               {menuItems.map((item) => {
                 if (isDropdown(item)) {
                   const menuId = item.label.toLowerCase();
