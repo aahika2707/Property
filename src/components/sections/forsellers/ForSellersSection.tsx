@@ -45,7 +45,7 @@ export default function ForSellersSection() {
   const onSubmit = async (data: {
     FirstName: string;
     LastName: string;
-    Mobile: number;
+    Mobile: string;
     Location: string;
     Preference: string;
     Property_type: string;
