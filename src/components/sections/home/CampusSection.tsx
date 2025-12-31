@@ -160,11 +160,12 @@ const CampusSection = () => {
                 </div>
 
                 <div className="flex justify-between items-center">
-                  <LinkWidget href={item.instaLink || ""} target="_blank" rel="noopener noreferrer">
-                    <ButtonWidget className="orange-button group rounded-[60px] px-5 h-10 text-[12px] 3xl:text-[14px]">
-                      EXPLORE MORE
-                    </ButtonWidget>
-                  </LinkWidget>
+                  <LinkWidget href={`/products/${item.id}`}>
+                <ButtonWidget className="orange-button group rounded-[60px] px-5 h-10 text-[12px]">
+                  EXPLORE MORE
+                </ButtonWidget>
+              </LinkWidget>
+
 
                   {item.instaLink && (
                     <LinkWidget href={item.instaLink} target="_blank" rel="noopener noreferrer">
