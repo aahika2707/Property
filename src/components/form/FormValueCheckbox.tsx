@@ -1,12 +1,12 @@
 'use client'
 
-import { Control, Controller, FieldValues } from "react-hook-form";
+import { Control, Controller, FieldValues, Path } from "react-hook-form";
 import { Checkbox } from "../ui/checkbox";
 import { Label } from "../ui/label";
 import { cn } from "@/lib/utils";
 
 interface FormValueCheckboxProps<T extends FieldValues> {
-  name: string;
+  name: Path<T>; // ✅ FIX HERE
   control: Control<T>;
   value: string | number | boolean;
   label?: string;
@@ -34,11 +34,11 @@ function FormValueCheckbox<T extends FieldValues>({
             ? field.value.includes(value)
             : field.value === value;
 
-          const handleChange = (checked) => {
+          const handleChange = (checked: boolean) => {
             if (Array.isArray(field.value)) {
               const newValue = checked
                 ? [...field.value, value]
-                : field.value.filter(v => v !== value);
+                : field.value.filter((v) => v !== value);
               field.onChange(newValue);
             } else {
               field.onChange(checked ? value : null);
@@ -52,14 +52,21 @@ function FormValueCheckbox<T extends FieldValues>({
                   id={`${name}-${value}`}
                   checked={isChecked}
                   onCheckedChange={handleChange}
-                  className={cn(className, (error || fieldState.invalid) && 'border-destructive')}
+                  className={cn(
+                    className,
+                    (error || fieldState.invalid) && "border-destructive"
+                  )}
                 />
                 {label && (
-                  <Label htmlFor={`${name}-${value}`} className={cn("cursor-pointer", labelclassName)}>
+                  <Label
+                    htmlFor={`${name}-${value}`}
+                    className={cn("cursor-pointer", labelclassName)}
+                  >
                     {label}
                   </Label>
                 )}
               </div>
+
               {(error || fieldState.error) && (
                 <p className="text-xs text-orange-500 mt-1 ml-6">
                   {error || fieldState.error?.message}
@@ -71,6 +78,6 @@ function FormValueCheckbox<T extends FieldValues>({
       />
     </div>
   );
-};
+}
 
 export default FormValueCheckbox;
