@@ -73,21 +73,21 @@ const StudentSection = () => {
   const studentData = [
     {
       id: "student-0",
-      name: "Johnson",
+      name: "Pragadeesh , Chennai",
       role: "Batch - ‘09 - ‘10",
-      videoSrc: "https://sellwidely.in/wp-content/uploads/2025/10/customer-review-3.mp4",
+      videoSrc: "/video/customer-review-1.mp4",
     },
     {
       id: "student-1",
-      name: "Michael Chen",
+      name: "Sujan , Parvathipuram",
       role: "Batch - ‘09 - ‘10",
-      videoSrc: "https://sellwidely.in/wp-content/uploads/2025/10/customer-review-2.mp4",
+      videoSrc:  "/video/customer-review-2.mp4",
     },
     {
       id: "student-2",
       name: "Emily Rodriguez",
       role: "Batch - ‘09 - ‘10",
-      videoSrc: "https://sellwidely.in/wp-content/uploads/2025/10/customer-review-4.mp4",
+      videoSrc:  "/video/customer-review-3.mp4",
     },
   ];
 

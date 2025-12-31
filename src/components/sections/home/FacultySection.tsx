@@ -1,95 +1,101 @@
 "use client";
 
-import Autoplay from "embla-carousel-autoplay";
-import useEmblaCarousel from "embla-carousel-react";
 import ContainerWidget from "@/components/widgets/ContainerWidget";
 import ImageWidget from "@/components/widgets/ImageWidget";
-import OrangeButtonWidget from "@/components/widgets/OrangeButtonWidget";
 import ParallaxWidget from "@/components/widgets/ParallaxWidget";
 import ScrollWidget from "@/components/widgets/ScrollWidget";
-import { Dummy11, Sathish } from "@/helpers/ImageHelper";
 import TitleWidget from "@/components/widgets/TitleWidget";
+import { Sathish } from "@/helpers/ImageHelper";
+
+interface ServiceItem {
+  number: string;
+  title: string;
+  text: string;
+}
 
 const FacultySection = () => {
-  const servicesData = [
+  const servicesData: ServiceItem[] = [
     {
       number: "01",
-      title: "All-in-One Property Destination",
-      text: "From Commercial Spaces to Farm Lands and Luxury Villas, we bring every type of property under one trusted roof — making your buying and selling journey seamless and smart.",
+      title: "Trust & Transparency First",
+      text: "We work only with verified projects and honest pricing, ensuring buyers and developers experience complete clarity with no hidden surprises.",
     },
     {
       number: "02",
-      title: "Trusted Listings, Transparent Deals",
-      text: "Every property is verified, genuine, and value-driven, ensuring your investment is safe, profitable, and hassle-free.",
+      title: "Pay-Only-on-Results Model",
+      text: "Developers pay us only when a sale is closed—no fixed salaries, no risky marketing spends, just performance-driven growth.",
     },
     {
       number: "03",
-      title: "Expert Guidance & Local Insights",
-      text: "Our experienced team connects you with the right buyers and sellers, offering market insights that turn your property dreams into reality.",
+      title: "Buyer-Centric Guidance",
+      text: "We focus on understanding real needs, not pushing sales, helping buyers make confident, pressure-free property decisions.",
+    },
+    {
+      number: "04",
+      title: "Strong Referral & Digital Network",
+      text: "Our powerful mix of digital marketing and ethical referral partners ensures wider reach, faster sales, and scalable results.",
     },
   ];
 
+  const Card = ({ number, title, text }: ServiceItem) => (
+    <div className="flex flex-col items-center text-center max-w-[260px]">
+      <span className="text-white text-xl font-semibold mb-4 bg-[#67d34f] p-6 rounded-full">
+        {number}
+      </span>
+      <h3 className="text-white text-lg font-semibold mb-2">
+        {title}
+      </h3>
+      <p className="text-gray-300 text-xs leading-relaxed">
+        {text}
+      </p>
+    </div>
+  );
+
   return (
-    <section className="w-full py-8 md:py-12 lg:py-16 xl:py-20 2xl:py-24 3xl:py-28 bg-white mx-auto max-w-[1920px]">
+    <section className="w-full py-16 bg-white mx-auto max-w-[1920px]">
+      
+      {/* TITLE */}
       <ContainerWidget>
         <ScrollWidget animation="fadeUp" delay={0.1}>
           <ParallaxWidget speed={-0.2}>
-            <TitleWidget title="Why Choose Sellwidely?" subTitle="Why Choose" />
+            <TitleWidget
+              title="Why Choose Sellwidely?"
+              subTitle="Why Choose"
+            />
           </ParallaxWidget>
         </ScrollWidget>
       </ContainerWidget>
+
+      {/* CONTENT */}
       <ContainerWidget>
-        <div className="bg-black grid grid-cols-1 md:grid-cols-2 ftco-degree-bg mt-10">
-          <div className="py-35 pl-6">
-            <div className="flex flex-col items-center justify-center mb-15">
-              <div className="w-[50%] flex flex-col items-center justify-center">
-                <span className="text-white text-xl font-semibold block mb-4 bg-[#67d34f] p-6 rounded-full">
-                  01
-                </span>
+        <div className="bg-black grid grid-cols-1 lg:grid-cols-2 mt-12">
 
-                <h3 className="text-white text-2xl font-semibold mb-3 text-center">
-                  All-in-One Property Destination
-                </h3>
+          {/* LEFT – DIAMOND LAYOUT */}
+          <div className="flex flex-col items-center justify-center gap-14 py-16">
 
-                <p className="text-gray-300 text-xs leading-relaxed text-center">
-                  From Commercial Spaces to Farm Lands and Luxury Villas, we
-                  bring every type of property under one trusted roof — making
-                  your buying and selling journey seamless and smart.
-                </p>
-              </div>
+            {/* TOP */}
+            <Card {...servicesData[0]} />
+
+            {/* CENTER (2 CARDS) */}
+            <div className="flex flex-col sm:flex-row gap-10">
+              <Card {...servicesData[1]} />
+              <Card {...servicesData[2]} />
             </div>
-            <div className="flex items-center justify-between gap-5">
-              <div className=" flex flex-col items-center justify-center">
-                <span className="text-white text-2xl font-semibold block mb-4 bg-[#67d34f] p-6 rounded-full">
-                  02
-                </span>
 
-                <h3 className="text-white text-xl font-semibold mb-3 text-center">
-                  Trusted Listings, Transparent Deals
-                </h3>
+            {/* BOTTOM */}
+            <Card {...servicesData[3]} />
 
-                <p className="text-gray-300 text-xs leading-relaxed text-center">
-                 Every property is verified, genuine, and value-driven, ensuring your investment is safe, profitable, and hassle-free.
-                </p>
-              </div>
-              <div className=" flex flex-col items-center justify-center">
-                <span className="text-white text-2xl font-semibold block mb-4 bg-[#67d34f] p-6 rounded-full">
-                  03
-                </span>
-
-                <h3 className="text-white text-xl font-semibold mb-3 text-center">
-                  Expert Guidance & Local Insights
-                </h3>
-
-                <p className="text-gray-300 text-xs leading-relaxed text-center">
-                  Our experienced team connects you with the right buyers and sellers, offering market insights that turn your property dreams into reality.
-                </p>
-              </div>
-            </div>
           </div>
-          <div>
-            <ImageWidget src={Sathish} alt="img" className="w-full h-full object-cover"/>
+
+          {/* RIGHT – IMAGE */}
+          <div className="hidden lg:block">
+            <ImageWidget
+              src={Sathish}
+              alt="Sellwidely Property"
+              className="w-full h-full object-cover"
+            />
           </div>
+
         </div>
       </ContainerWidget>
     </section>

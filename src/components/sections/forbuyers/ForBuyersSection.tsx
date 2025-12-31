@@ -91,7 +91,7 @@ export default function ForBuyersSection() {
       );
 
     setFilteredProducts(result);
-    setPagedProducts(result.slice(0, 10)); // reset page
+    setPagedProducts(result.slice(0, 12)); // reset page
   }, [selectedCategory, selectedLocation, allProducts]);
 
   return (
@@ -125,11 +125,11 @@ export default function ForBuyersSection() {
             )}
 
             {/* PAGINATION */}
-            {!loading && filteredProducts.length > 10 && (
+            {!loading && filteredProducts.length > 12 && (
               <div className="pt-10">
                 <PaginationWidget
                   items={filteredProducts}
-                  itemsPerPage={10}
+                  itemsPerPage={12}
                   onPageChange={setPagedProducts}
                 />
               </div>

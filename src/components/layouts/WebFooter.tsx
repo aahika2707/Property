@@ -138,9 +138,12 @@ const WebFooter = () => {
 
               <div className="flex flex-row items-start justify-start gap-6">
                 <p className={`${linkTextClass} w-[300px]`}>
-                  To be the trusted Architect of Home and Land, pioneering a
-                  journey that moves from connecting hearts with cherished
-                  properties to creatively building enduring legacies.
+                  Sell Widely Real Estate is a trust-driven property growth 
+                  platform connecting verified developers with genuine buyers. 
+                  We simplify real estate through transparent guidance, ethical selling, 
+                  and performance-based partnerships. Our mission is to turn property 
+                  decisions into confident investments and lasting relationships that 
+                  create value for families, communities, and future generations.
                 </p>
               </div>
 

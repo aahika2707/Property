@@ -84,7 +84,17 @@ const FounderSection = () => {
               4xl:text-[22px]
               "
                 >
-                 To make real estate transactions transparent, reliable, and empowering, helping individuals and businesses make informed property decisions while promoting financial independence and trust.
+
+                  To simplify real estate buying through honest guidance and verified projects
+
+To help developers sell faster without heavy fixed costs or risky marketing spends
+
+To build a performance-based, referral-driven ecosystem that creates income opportunities for thousands
+
+To replace pressure-selling with education, clarity, and confidence
+
+To make real estate a relationship-driven journey, not a stressful transaction
+
                 </p>
                 <div className="border border-gray-500" />
 
@@ -101,7 +111,7 @@ const FounderSection = () => {
               4xl:text-4xl
               "
                 >
-                  Our Vission
+                  Our Vision
                 </h4>
                 <p
                   className=" font-mulish text-black leading-relaxed text-[13px]
@@ -114,7 +124,7 @@ const FounderSection = () => {
               4xl:text-[22px]
               "
                 >
-                  To be recognized as a youth-driven real estate brand that stands for integrity, innovation, and impact, transforming the way people experience property transactions in India and beyond.
+                  To become India’s most trusted real estate growth platform, empowering developers, buyers, and referral partners through ethical selling, transparent systems, and human-centered experiences, while building communities that last for generations.
                 </p>
               </div>
             </ScrollWidget>

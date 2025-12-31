@@ -78,11 +78,11 @@ export default function ContactFormModalContent() {
 
       <div>
         <label htmlFor="message" className="block text-sm font-medium text-foreground mb-1">
-          Message<span className="text-chart-1">*</span>
+          Tell us your requirements<span className="text-chart-1">*</span>
         </label>
         <textarea
           {...register("Message")}
-          placeholder="Message"
+          placeholder="Tell us your requirements"
           rows={6}
           className="flex w-full rounded-2xl border border-[#BDBDBD] bg-background px-4 py-3 text-base placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-0 focus-visible:border-chart-1/50 disabled:cursor-not-allowed disabled:opacity-50 resize-none"
         />

@@ -17,10 +17,9 @@ const CourseSection = () => {
                   <div className="w-20 h-20 mb-4 rounded-full bg-[#67d34f]/10 flex items-center justify-center">
                     <ImageWidget alt="img" src={Piggy} className="w-10 h-10 object-cover"/>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">No Downpayment</h3>
+                  <h3 className="text-xl font-semibold mb-2">Property Sales & Lead Generation</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    A small river named Duden flows by their place and supplies
-                    it with the necessary regelialia.
+                    We drive high-quality buyer leads and faster closures through digital marketing, referrals, and result-driven sales strategies.
                   </p>
                 </div>
 
@@ -28,10 +27,9 @@ const CourseSection = () => {
                   <div className="w-20 h-20 mb-4 rounded-full bg-[#67d34f]/10 flex items-center justify-center">
                     <ImageWidget alt="img" src={Wallet} className="w-10 h-10 object-cover"/>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">All Cash Offer</h3>
+                  <h3 className="text-xl font-semibold mb-2">Verified Project Promotion</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    A small river named Duden flows by their place and supplies
-                    it with the necessary regelialia.
+                    We market only legally verified plots, villas, apartments, and commercial projects to ensure buyer trust and safe investments.
                   </p>
                 </div>
 
@@ -40,11 +38,10 @@ const CourseSection = () => {
                     <ImageWidget alt="img" src={Document} className="w-10 h-10 object-cover"/>
                   </div>
                   <h3 className="text-xl font-semibold mb-2">
-                    Experts in Your Corner
+                    Buyer Guidance & Site Visit Support
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    A small river named Duden flows by their place and supplies
-                    it with the necessary regelialia.
+                   From requirement understanding to site visits and deal support, we guide buyers with clarity and confidence at every step.
                   </p>
                 </div>
 
@@ -53,11 +50,10 @@ const CourseSection = () => {
                     <ImageWidget alt="img" src={Padlock} className="w-10 h-10 object-cover"/>
                   </div>
                   <h3 className="text-xl font-semibold mb-2">
-                    Locked in Pricing
+                    Referral Partner Program
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    A small river named Duden flows by their place and supplies
-                    it with the necessary regelialia.
+                    We create income opportunities through a transparent, performance-based referral model for individuals and professionals.
                   </p>
                 </div>
               </div>

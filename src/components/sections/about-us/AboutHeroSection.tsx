@@ -42,20 +42,10 @@ const AboutHeroSection = () => {
                 3xl:max-w-[900px] 4xl:max-w-[1100px]
               "
               >
-                At SellWidely, we are redefining real estate consultancy with a foundation built on trust, transparency, and transformation. Established in 2024, SellWidely has quickly emerged as a dynamic property consulting firm, delivering seamless real estate solutions that empower individuals, investors, and communities to achieve their goals with confidence.
-              </p>
-            </ScrollWidget>
 
-            <ScrollWidget animation="slideLeft" delay={0.2}>
-              <p
-                className="
-                font-area-variable font-semibold 
-                text-base md:text-lg lg:text-xl xl:text-2xl 
-                2xl:text-3xl 3xl:text-[40px] 4xl:text-[48px] 
-                text-black mt-15
-              "
-              >
-                Our Origin
+
+                At Sell Widely Real Estate, we believe property is not just land or buildings — it is dreams, security, and a future passed on to generations.
+
               </p>
             </ScrollWidget>
 
@@ -70,8 +60,11 @@ const AboutHeroSection = () => {
                 3xl:max-w-[900px] 4xl:max-w-[1100px]
               "
               >
-                Our journey began with purpose. For over a decade, our founders were deeply involved in youth and social initiatives—driving change, supporting communities, and inspiring others to act. Through these experiences, we discovered an undeniable truth: true social impact is sustainable only through financial independence.
-              </p>
+                Born from the vision of Sell Widely, our real estate vertical was created to bridge the gap between genuine property developers and real people searching for honest opportunities. In a market crowded with noise, hidden charges, and pressure-driven sales, we chose a different path — trust first, value always.
+
+We are not traditional brokers.
+We are growth partners, storytellers, and relationship builders.
+</p>
             </ScrollWidget>
              <ScrollWidget animation="fadeUp" delay={0.4}>
               <p
@@ -84,7 +77,33 @@ const AboutHeroSection = () => {
                 3xl:max-w-[900px] 4xl:max-w-[1100px]
               "
               >
-                Motivated by this belief, a group of passionate young professionals came together to build SellWidely—not merely as a business venture, but as a mission to combine financial growth with ethical values and community empowerment.
+                Our role is simple yet powerful:
+                <br></br>
+👉 Help developers sell faster and smarter
+<br></br>
+👉 Help buyers invest with confidence and clarity
+<br></br>
+👉 Create earning opportunities through ethical referral networks
+<br></br>
+
+              </p>
+            </ScrollWidget>
+
+                       <ScrollWidget animation="fadeUp" delay={0.4}>
+              <p
+                className="
+                text-[12px] sm:text-[13px] lg:text-[14px] 
+                xl:text-[16px] 2xl:text-[17px] 3xl:text-[18px] 4xl:text-[20px]
+                font-normal text-black leading-normal 
+                w-full 
+                md:max-w-[650px] xl:max-w-[750px] 2xl:max-w-[850px] 
+                3xl:max-w-[900px] 4xl:max-w-[1100px]
+              "
+              >
+Every project we associate with is carefully verified. Every buyer we guide is treated like family. Every sale we facilitate carries responsibility — because we know a property decision can change a life.
+
+Sell Widely Real Estate stands for transparency, dignity, and long-term impact, not shortcuts or commissions alone.
+
               </p>
             </ScrollWidget>
           </div>
