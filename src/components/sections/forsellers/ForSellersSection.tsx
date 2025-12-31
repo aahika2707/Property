@@ -48,7 +48,7 @@ export default function ForSellersSection() {
     Mobile: string;
     Location: string;
     Preference: string;
-    Property_type: string;
+    Property_type?: string; 
     Message: string;
   }) => {
     const toastId = toast.loading("Sending message...");
@@ -63,7 +63,7 @@ export default function ForSellersSection() {
           Mobile: data.Mobile,
           Location: data.Location,
           Preference: data.Preference,
-          Property_type: data.Property_type,
+          Property_type: data.Property_type || "",
           Message: data.Message,
         }),
       });
